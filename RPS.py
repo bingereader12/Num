@@ -7,36 +7,36 @@ def gameWin(comp, you):
         return None
 
     # Check for all possibilities when computer chose s
-    elif comp == 's':
-        if you=='w':
+    elif comp == 'r':
+        if you=='s':
             return False
-        elif you=='g':
+        elif you=='p':
             return True
     
     # Check for all possibilities when computer chose w
-    elif comp == 'w':
-        if you=='g':
+    elif comp == 'p':
+        if you=='r':
             return False
         elif you=='s':
             return True
     
     # Check for all possibilities when computer chose g
-    elif comp == 'g':
-        if you=='s':
+    elif comp == 's':
+        if you=='p':
             return False
-        elif you=='w':
+        elif you=='r':
             return True
 
-print("Comp Turn: Snake(s) Water(w) or Gun(g)?")
+print("Comp Turn: Rock(r) Paper(p) or Scissor(s)?")
 randNo = random.randint(1, 3) 
 if randNo == 1:
-    comp = 's'
+    comp = 'r'
 elif randNo == 2:
-    comp = 'w'
+    comp = 'p'
 elif randNo == 3:
-    comp = 'g'
+    comp = 's'
 
-you = input("Your Turn: Snake(s) Water(w) or Gun(g)?")
+you = input("Your Turn: Rock(r) Paper(p) or Scissor(s)?")
 a = gameWin(comp, you)
 
 print(f"Computer chose {comp}")
