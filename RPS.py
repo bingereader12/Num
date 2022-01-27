@@ -1,26 +1,22 @@
 import random
 
-# Snake Water Gun or Rock Paper Scissors
 def gameWin(comp, you):
-    # If two values are equal, declare a tie!
+    
     if comp == you:
         return None
 
-    # Check for all possibilities when computer chose s
     elif comp == 'r':
         if you=='s':
             return False
         elif you=='p':
             return True
-    
-    # Check for all possibilities when computer chose w
+   
     elif comp == 'p':
         if you=='r':
             return False
         elif you=='s':
             return True
     
-    # Check for all possibilities when computer chose g
     elif comp == 's':
         if you=='p':
             return False
